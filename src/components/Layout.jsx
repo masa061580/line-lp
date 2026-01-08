@@ -97,7 +97,7 @@ const Layout = ({ chapters, children, activeChapterId, onSelectChapter, searchQu
                     {/* Footer inserted here inside main or after? 
                     If we want it specifically at the bottom of the main content flow, putting it here is good.
                 */}
-                    <Footer />
+                    <Footer simple={activeChapterId === null} />
                 </main>
 
             </div> {/* End flex wrapper */}
