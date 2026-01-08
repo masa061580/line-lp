@@ -88,6 +88,73 @@ const WelcomeScreen = ({ onStart }) => {
                 </button>
             </div>
 
+            {/* Video Section */}
+            <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+                <a
+                    href="https://youtu.be/Vrphwi57sG4?si=_W8yjcozQDd_LnQz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        display: 'inline-block',
+                        position: 'relative',
+                        textDecoration: 'none',
+                        maxWidth: '600px',
+                        width: '100%'
+                    }}
+                >
+                    <div style={{
+                        position: 'relative',
+                        overflow: 'hidden',
+                        borderRadius: '16px',
+                        boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        transition: 'transform 0.3s ease',
+                        background: '#000'
+                    }}
+                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    >
+                        {/* Thumbnail Image */}
+                        <img
+                            src="/assets/thumbnail_custom.jpg"
+                            alt="Video Thumbnail"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                display: 'block',
+                                objectFit: 'contain'
+                            }}
+                        />
+
+                        {/* Simple Play Icon Overlay */}
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            background: 'rgba(0,0,0,0.1)'
+                        }}>
+                            <div style={{
+                                width: '60px',
+                                height: '60px',
+                                background: 'rgba(239, 68, 68, 0.9)',
+                                borderRadius: '50%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                boxShadow: '0 0 20px rgba(239, 68, 68, 0.6)'
+                            }}>
+                                <span style={{ fontSize: '2rem', color: '#fff', marginLeft: '5px' }}>▶</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <div className="glass-card" style={{
                 padding: '2.5rem',
                 textAlign: 'left',
