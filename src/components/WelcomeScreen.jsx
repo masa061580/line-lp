@@ -90,6 +90,25 @@ const WelcomeScreen = ({ onStart }) => {
 
             {/* Video Section */}
             <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+                <h3 style={{
+                    fontSize: '1.2rem',
+                    marginBottom: '1rem',
+                    color: 'var(--text-primary)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem'
+                }}>
+                    <span style={{ fontSize: '1.5rem' }}>📺</span>
+                    <span style={{
+                        background: 'linear-gradient(to right, #60a5fa, #c084fc)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        fontWeight: '800'
+                    }}>
+                        ChatGPT5対応・生成AIレクチャー動画はこちら！
+                    </span>
+                </h3>
                 <a
                     href="https://youtu.be/Vrphwi57sG4?si=_W8yjcozQDd_LnQz"
                     target="_blank"

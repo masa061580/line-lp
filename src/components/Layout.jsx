@@ -47,7 +47,6 @@ const Layout = ({ chapters, children, activeChapterId, onSelectChapter, searchQu
                         borderRight: '1px solid var(--glass-border)',
                         padding: '2rem 1rem',
                         overflowY: 'auto',
-                        transform: isSidebarOpen ? 'translateX(0)' : 'translateX(0)',
                         zIndex: 90,
                         transition: 'transform 0.3s ease'
                     }}
@@ -104,24 +103,24 @@ const Layout = ({ chapters, children, activeChapterId, onSelectChapter, searchQu
 
             {/* Responsive Styles Injection */}
             <style>{`
-@media(max - width: 768px) {
-            .sidebar {
-        transform: translateX(-100 %)!important;
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
     }
-            .sidebar.open {
-        transform: translateX(0)!important;
+    .sidebar.open {
+        transform: translateX(0);
     }
-            .main - content {
-        margin - left: 0!important;
-        padding - bottom: 80px!important; /* Space for fab */
+    .main-content {
+        margin-left: 0 !important;
+        padding-bottom: 80px !important; /* Space for fab */
     }
-            .mobile - menu - btn {
-        display: flex!important;
+    .mobile-menu-btn {
+        display: flex !important;
     }
 }
-@media(min - width: 769px) {
-            .mobile - menu - btn {
-        display: none!important;
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none !important;
     }
 }
 `}</style>
