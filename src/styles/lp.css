@@ -1,0 +1,184 @@
+/* LP Styles */
+.lp-container {
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+.lp-section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.lp-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.lp-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.lp-accent {
+    color: #38bdf8;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lp-subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lp-cta-button {
+    display: inline-block;
+    background: #25d366;
+    /* LINE Green */
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.lp-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.lp-note {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 1rem;
+}
+
+/* Sections */
+.lp-section {
+    padding: 5rem 0;
+}
+
+.lp-section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #1e293b;
+}
+
+.lp-target {
+    background-color: white;
+}
+
+.lp-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.lp-card {
+    padding: 2rem;
+    background: #f1f5f9;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.lp-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.lp-message {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.lp-benefits {
+    background: #0f172a;
+    color: white;
+}
+
+.lp-benefits .lp-section-title {
+    color: white;
+}
+
+.lp-benefit-item {
+    background: rgba(255, 255, 255, 0.05);
+    /* Glass effect attempt */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.lp-benefit-item h3 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+    margin-bottom: 1rem;
+}
+
+.lp-benefit-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.lp-benefit-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #38bdf8;
+}
+
+.lp-faq {
+    background-color: white;
+}
+
+.lp-faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.lp-faq-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.lp-footer {
+    background: #1e293b;
+    color: #94a3b8;
+    padding: 3rem 0;
+    font-size: 0.9rem;
+}
+
+.lp-footer h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.lp-notes li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .lp-title {
+        font-size: 1.8rem;
+    }
+}
