@@ -66,11 +66,51 @@ const WelcomeScreen = ({ onStart }) => {
                 <h1 style={heroTitleStyle}>
                     医療者のための<br />厳選プロンプト集
                 </h1>
+
+                <div style={{
+                    display: 'inline-block',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    padding: '0.3rem 1rem',
+                    borderRadius: '20px',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-secondary)',
+                    marginBottom: '1.5rem',
+                    fontWeight: '500'
+                }}>
+                    Ver 1.0 (2026.01)
+                </div>
+
                 <p style={subtitleStyle}>
                     Generative AI Prompt Collection for Medical Professionals. <br />
                     日々の臨床、研究、論文執筆を加速させるための、<br />
                     検証済みプロンプトと実践的な初期設定ガイドを体系化しました。
                 </p>
+
+                {/* Update Notice Card */}
+                <div className="glass-card" style={{
+                    maxWidth: '600px',
+                    margin: '0 auto 2rem auto',
+                    padding: '1.5rem',
+                    textAlign: 'left',
+                    background: 'rgba(59, 130, 246, 0.1)', // Light blue tint
+                    border: '1px solid rgba(59, 130, 246, 0.3)',
+                    borderRadius: '12px'
+                }}>
+                    <h4 style={{
+                        color: '#60a5fa',
+                        marginBottom: '0.8rem',
+                        fontSize: '1.1rem',
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}>
+                        <span style={{ marginRight: '0.5rem' }}>📢</span> アップデートとパスワード変更について
+                    </h4>
+                    <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+                        本サイトはAI技術の進化に合わせて随時アップデートを行い、コンテンツを進化させていきます。<br />
+                        セキュリティ保持のためアクセスパスワードを定期的に変更する場合がありますが、その際は<strong>公式LINEにてご連絡いたします。</strong>
+                    </p>
+                </div>
 
                 <button
                     style={ctaButtonStyle}
