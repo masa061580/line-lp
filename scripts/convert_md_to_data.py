@@ -42,10 +42,16 @@ def parse_markdown(md_content):
     section_pattern = re.compile(r'^###\s+(.*)')
     image_pattern = re.compile(r'!\[\[(.*?)\]\]')
     
+    in_code_block = False
+    
     for line in lines:
-        # Check for Chapter
+        # Toggle code block state
+        if line.strip().startswith('```'):
+            in_code_block = not in_code_block
+            
+        # Check for Chapter (only if not in code block)
         chapter_match = chapter_pattern.match(line)
-        if chapter_match:
+        if chapter_match and not in_code_block:
             # Save previous section if exists
             if current_section and current_chapter:
                 current_chapter['sections'].append(current_section)
@@ -61,9 +67,9 @@ def parse_markdown(md_content):
             }
             continue
             
-        # Check for Section
+        # Check for Section (only if not in code block)
         section_match = section_pattern.match(line)
-        if section_match:
+        if section_match and not in_code_block:
             if current_section and current_chapter:
                 current_chapter['sections'].append(current_section)
             
