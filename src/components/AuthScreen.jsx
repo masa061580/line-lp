@@ -6,7 +6,7 @@ const AuthScreen = ({ onAuthenticated }) => {
 
     // Simple hardcoded password - meant to be changed by user
     // In a real app, this should at least be an env var or hash
-    const CORRECT_PASSWORD = 'demo';
+    const CORRECT_PASSWORD = 'Kx7mR4pL';
 
     const handleSubmit = (e) => {
         e.preventDefault();
