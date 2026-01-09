@@ -1,0 +1,31 @@
+:root {
+  /* Colors */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-accent: #38bdf8; /* Sky 400 */
+
+  --primary-color: #6366f1; /* Indigo 500 */
+  --accent-color: #f472b6; /* Pink 400 */
+  --success-color: #10b981;
+
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --glass-blur: blur(10px);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}

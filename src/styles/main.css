@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import './theme.css';
+@import './glass.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-primary);
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+    /* Parallax-like effect */
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
