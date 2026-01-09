@@ -105,7 +105,7 @@ def convert_md_to_js(md_path, js_path):
     print(f"Successfully converted {md_path} to {js_path}")
 
 # Paths
-md_file = r"c:\Users\misaw\obsidian-vault\docs\prompt_collection\GenerativeAI_Prompt_Collection_Master.md"
-js_file = r"c:\Users\misaw\obsidian-vault\50_coding\20260108_prompt_collection_web\src\data\content.js"
+md_file = r"c:\Users\misaw\obsidian_vault\docs\prompt_collection\GenerativeAI_Prompt_Collection_Master.md"
+js_file = r"c:\Users\misaw\obsidian_vault\50_coding\20260108_prompt_collection_web\src\data\content.js"
 
 convert_md_to_js(md_file, js_file)
