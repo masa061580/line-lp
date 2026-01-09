@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './Layout';
 import PromptCard from './PromptCard';
 import AuthScreen from './AuthScreen';
@@ -11,6 +11,11 @@ function PromptCollectionApp() {
     // activeChapterId is null means "Home / Welcome Screen"
     const [activeChapterId, setActiveChapterId] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
+
+    // Scroll to top when chapter changes
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [activeChapterId]);
 
     const handleAuthenticated = () => {
         setIsAuthenticated(true);

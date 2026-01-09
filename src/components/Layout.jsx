@@ -11,7 +11,7 @@ const Layout = ({ chapters, children, activeChapterId, onSelectChapter, searchQu
             {/* Wrap main content area so footer pushes down */}
             <div style={{ display: 'flex', flex: 1 }}>
 
-                {/* Mobile Menu Button */}
+                {/* Mobile Menu Button - Pill Style */}
                 <button
                     className="glass-button mobile-menu-btn"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -20,17 +20,23 @@ const Layout = ({ chapters, children, activeChapterId, onSelectChapter, searchQu
                         bottom: '20px',
                         right: '20px',
                         zIndex: 100,
-                        borderRadius: '50%',
-                        width: '50px',
-                        height: '50px',
+                        borderRadius: '50px',
+                        padding: '0.875rem 1.5rem',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        gap: '0.5rem',
                         background: 'var(--primary-color)',
-                        boxShadow: '0 4px 10px rgba(0,0,0,0.3)'
+                        boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)',
+                        fontSize: '0.95rem',
+                        fontWeight: '600',
+                        color: '#fff',
+                        border: 'none',
+                        cursor: 'pointer'
                     }}
                 >
-                    {isSidebarOpen ? '✕' : '☰'}
+                    <span style={{ fontSize: '1.1rem' }}>{isSidebarOpen ? '✕' : '☰'}</span>
+                    <span>{isSidebarOpen ? '閉じる' : 'メニュー'}</span>
                 </button>
 
                 {/* Sidebar */}

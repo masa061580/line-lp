@@ -176,69 +176,36 @@ const WelcomeScreen = ({ onStart }) => {
                         ChatGPT5対応・生成AIレクチャー動画はこちら！
                     </span>
                 </h3>
-                <a
-                    href="https://youtu.be/Vrphwi57sG4?si=_W8yjcozQDd_LnQz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                        display: 'inline-block',
-                        position: 'relative',
-                        textDecoration: 'none',
-                        maxWidth: '600px',
-                        width: '100%'
-                    }}
-                >
+                <div style={{
+                    maxWidth: '600px',
+                    width: '100%',
+                    margin: '0 auto'
+                }}>
                     <div style={{
                         position: 'relative',
+                        paddingBottom: '56.25%', /* 16:9 aspect ratio */
+                        height: 0,
                         overflow: 'hidden',
                         borderRadius: '16px',
                         boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        transition: 'transform 0.3s ease',
-                        background: '#000'
-                    }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                    >
-                        {/* Thumbnail Image */}
-                        <img
-                            src="/assets/thumbnail_custom.jpg"
-                            alt="Video Thumbnail"
+                        border: '1px solid rgba(255,255,255,0.1)'
+                    }}>
+                        <iframe
+                            src="https://www.youtube.com/embed/Vrphwi57sG4?rel=0"
+                            title="ChatGPT5対応・生成AIレクチャー動画"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
                             style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
                                 width: '100%',
-                                height: 'auto',
-                                display: 'block',
-                                objectFit: 'contain'
+                                height: '100%'
                             }}
                         />
-
-                        {/* Simple Play Icon Overlay */}
-                        <div style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            background: 'rgba(0,0,0,0.1)'
-                        }}>
-                            <div style={{
-                                width: '60px',
-                                height: '60px',
-                                background: 'rgba(239, 68, 68, 0.9)',
-                                borderRadius: '50%',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                boxShadow: '0 0 20px rgba(239, 68, 68, 0.6)'
-                            }}>
-                                <span style={{ fontSize: '2rem', color: '#fff', marginLeft: '5px' }}>▶</span>
-                            </div>
-                        </div>
                     </div>
-                </a>
+                </div>
 
                 {/* Seminar Links */}
                 <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
