@@ -112,6 +112,33 @@ const WelcomeScreen = ({ onStart }) => {
                     </p>
                 </div>
 
+                {/* Caution Notice Card */}
+                <div className="glass-card" style={{
+                    maxWidth: '600px',
+                    margin: '0 auto 2rem auto',
+                    padding: '1.5rem',
+                    textAlign: 'left',
+                    background: 'rgba(220, 38, 38, 0.1)', // Red tint for caution
+                    border: '1px solid rgba(220, 38, 38, 0.3)',
+                    borderRadius: '12px'
+                }}>
+                    <h4 style={{
+                        color: '#f87171',
+                        marginBottom: '0.8rem',
+                        fontSize: '1.1rem',
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}>
+                        <span style={{ marginRight: '0.5rem' }}>⚠️</span> CAUTION
+                    </h4>
+                    <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
+                        本ドキュメントは、生成AIを活用した業務効率化、研究支援、臨床実務のためのプロンプトを体系的にまとめたものです。<br />
+                        プレースホルダー（例: <code>[日付]</code>, <code>[場所]</code>）は実情に合わせて書き換えてご使用ください。<br />
+                        <strong style={{ color: '#fca5a5' }}>AIの出力を精査・吟味の上ご自身の責任でご活用ください。<br />
+                            これらのプロンプトを活用して何らかの不利益を被ったとしても補償いたしかねます。</strong>
+                    </p>
+                </div>
+
                 <button
                     style={ctaButtonStyle}
                     onMouseEnter={(e) => {
@@ -212,6 +239,49 @@ const WelcomeScreen = ({ onStart }) => {
                         </div>
                     </div>
                 </a>
+
+                {/* Seminar Links */}
+                <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+                    <h4 style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>2025年6月に開催したセミナーと同様の内容の動画</h4>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <a
+                            href="https://note.com/preview/n509108dad8cf?prev_access_key=d8a524ab9c119b3ae6b648f221e744ac"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="glass-button"
+                            style={{
+                                textDecoration: 'none',
+                                padding: '0.8rem 1.5rem',
+                                fontSize: '0.95rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                background: 'rgba(59, 130, 246, 0.1)',
+                                border: '1px solid rgba(59, 130, 246, 0.3)'
+                            }}
+                        >
+                            <span>🔰</span> 初級セミナー
+                        </a>
+                        <a
+                            href="https://note.com/preview/n393422874d8c?prev_access_key=228b40b0ae4f203b05d3f2330d152583"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="glass-button"
+                            style={{
+                                textDecoration: 'none',
+                                padding: '0.8rem 1.5rem',
+                                fontSize: '0.95rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                background: 'rgba(168, 85, 247, 0.1)',
+                                border: '1px solid rgba(168, 85, 247, 0.3)'
+                            }}
+                        >
+                            <span>🚀</span> 中級セミナー
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div className="glass-card" style={{
