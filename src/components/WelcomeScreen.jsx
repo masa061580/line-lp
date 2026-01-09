@@ -64,7 +64,7 @@ const WelcomeScreen = ({ onStart }) => {
                     ✨
                 </div>
                 <h1 style={heroTitleStyle}>
-                    医療者のための<br />厳選プロンプト集
+                    医療者のための<br />生成AIレクチャー動画と源泉プロンプト集
                 </h1>
 
                 <div style={{
