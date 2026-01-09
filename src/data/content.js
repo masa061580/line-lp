@@ -24,7 +24,7 @@ export const contentData = [
     "sections": [
       {
         "title": "Introduction",
-        "content": "\n"
+        "content": "\n学習に役立つプロンプトです。スケジュール機能との組み合わせがお勧め！\n\n"
       },
       {
         "title": "1. 英会話練習",
@@ -45,7 +45,7 @@ export const contentData = [
     ]
   },
   {
-    "title": "Chapter 2: 日常業務効率化 (Everyday Business Tasks)",
+    "title": "Chapter 3: 日常業務効率化 (Everyday Business Tasks)",
     "id": "chap-3",
     "sections": [
       {
@@ -75,7 +75,7 @@ export const contentData = [
     ]
   },
   {
-    "title": "Chapter 3: 医療・看護実務 (Medical & Clinical Practice)",
+    "title": "Chapter 4: 医療・看護実務 (Medical & Clinical Practice)",
     "id": "chap-4",
     "sections": [
       {
@@ -109,12 +109,12 @@ export const contentData = [
     ]
   },
   {
-    "title": "Chapter 4: 研究・論文執筆 (Research & Academic Writing)",
+    "title": "Chapter 5: 研究・論文執筆 (Research & Academic Writing)",
     "id": "chap-5",
     "sections": [
       {
         "title": "Introduction",
-        "content": "\n"
+        "content": "\n> [!DANGER]\n> 論文執筆にAIを使用することを禁止しているJournalもあります。\n> 使用にあたっては内容を十分に吟味の上ご自身の責任活用ください。\n> このプロンプトを活用して何らかの不利益を被っても補償致しかねます。\n\n\n"
       },
       {
         "title": "1.  抄読会・論文読解",
@@ -143,7 +143,7 @@ export const contentData = [
     ]
   },
   {
-    "title": "Chapter 5: 業務効率化・ツール活用 (Advanced Tools & Development)",
+    "title": "Chapter 6 業務効率化・ツール活用 (Advanced Tools & Development)",
     "id": "chap-6",
     "sections": [
       {
