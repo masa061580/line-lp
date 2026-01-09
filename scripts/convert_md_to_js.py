@@ -38,8 +38,14 @@ def convert_md_to_js(md_path, js_path):
         text = md_image_pattern.sub(replacement_normal, text)
         return text
 
+    in_code_block = False
+
     for line in lines:
-        if line.startswith('## Chapter'):
+        # Check for code block delimiter
+        if line.strip().startswith('```'):
+            in_code_block = not in_code_block
+
+        if not in_code_block and line.startswith('## Chapter'):
             # New Chapter
             title = line.strip().replace('## ', '')
             chap_id = f"chap-{len(chapters) + 1}"
@@ -58,7 +64,7 @@ def convert_md_to_js(md_path, js_path):
             current_chapter["sections"].append(current_section)
             chapters.append(current_chapter)
             
-        elif line.startswith('### '):
+        elif not in_code_block and line.startswith('### '):
             # New Section
             if current_chapter is None:
                 continue # Skip sections before any chapter
