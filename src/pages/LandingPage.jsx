@@ -1,33 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/lp.css';
 
+// Testimonials data - defined outside component to avoid dependency issues
+const allTestimonials = [
+    { text: '目から鱗の講義でした。なんとなくChatGPTに課金していましたが、全然使いこなせていませんでした。' },
+    { text: '臨床業務でお忙しい中、医療に特化したAI活用法を惜しみなく講義くださりありがとうございます。研究方面で大きな時間短縮になりそうです。' },
+    { text: 'とても分かりやすかったです！基礎の基礎から学べましたのは大きな収穫です。' },
+    { text: '先生のご活動は世界を変えるものです。これからも情報発信をお願いいたします！' },
+    { text: '実際の臨床現場でどう使えるかが具体的にイメージできました。明日から早速試してみます。' },
+    { text: 'プロンプトの書き方一つでこんなに結果が変わるとは驚きでした。' },
+    { text: '忙しい中でも隙間時間で学べる構成がありがたいです。' },
+    { text: '医療者向けに特化した内容なので、すぐに業務に活かせそうです。' },
+    { text: '論文執筆の効率が格段に上がりそうです。もっと早く知りたかった！' },
+    { text: 'AIに対する漠然とした不安が解消されました。正しく使えば強力なツールになりますね。' },
+    { text: '同僚にもぜひ勧めたい内容でした。チーム全体の生産性向上につながりそうです。' },
+    { text: '基礎から応用まで体系的に学べて、自分のレベルに合わせて進められました。' },
+];
+
 const LandingPage = () => {
     const observerRef = useRef(null);
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
     const [showStickyCta, setShowStickyCta] = useState(false);
 
-    const allTestimonials = [
-        { text: '目から鱗の講義でした。なんとなくChatGPTに課金していましたが、全然使いこなせていませんでした。' },
-        { text: '臨床業務でお忙しい中、医療に特化したAI活用法を惜しみなく講義くださりありがとうございます。研究方面で大きな時間短縮になりそうです。' },
-        { text: 'とても分かりやすかったです！基礎の基礎から学べましたのは大きな収穫です。' },
-        { text: '先生のご活動は世界を変えるものです。これからも情報発信をお願いいたします！' },
-        { text: '実際の臨床現場でどう使えるかが具体的にイメージできました。明日から早速試してみます。' },
-        { text: 'プロンプトの書き方一つでこんなに結果が変わるとは驚きでした。' },
-        { text: '忙しい中でも隙間時間で学べる構成がありがたいです。' },
-        { text: '医療者向けに特化した内容なので、すぐに業務に活かせそうです。' },
-        { text: '論文執筆の効率が格段に上がりそうです。もっと早く知りたかった！' },
-        { text: 'AIに対する漠然とした不安が解消されました。正しく使えば強力なツールになりますね。' },
-        { text: '同僚にもぜひ勧めたい内容でした。チーム全体の生産性向上につながりそうです。' },
-        { text: '基礎から応用まで体系的に学べて、自分のレベルに合わせて進められました。' },
-    ];
-
-    // Shuffle testimonials on mount
-    const [testimonials, setTestimonials] = useState([]);
-
-    useEffect(() => {
-        const shuffled = [...allTestimonials].sort(() => Math.random() - 0.5);
-        setTestimonials(shuffled);
-    }, []);
+    // Shuffle testimonials - initialize with shuffled array
+    const [testimonials] = useState(() =>
+        [...allTestimonials].sort(() => Math.random() - 0.5)
+    );
 
     useEffect(() => {
         // Intersection Observer for scroll animations
@@ -71,8 +69,6 @@ const LandingPage = () => {
 
     // Testimonial auto-slide
     useEffect(() => {
-        if (testimonials.length === 0) return;
-
         const interval = setInterval(() => {
             setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
         }, 5000);
