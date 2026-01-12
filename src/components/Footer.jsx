@@ -47,6 +47,19 @@ const Footer = ({ simple = false }) => {
             <div style={{ opacity: 0.6, fontSize: '0.8rem' }}>
                 &copy; {new Date().getFullYear()} Masashi Misawa. All Rights Reserved.
             </div>
+
+            {/* Version / Changelog */}
+            <div style={{
+                marginTop: '1.5rem',
+                paddingTop: '1rem',
+                borderTop: '1px solid rgba(255,255,255,0.05)',
+                fontSize: '0.7rem',
+                opacity: 0.4,
+                color: 'var(--text-secondary)'
+            }}>
+                <div style={{ marginBottom: '0.3rem' }}>Version 1.01</div>
+                <div>2026-01-12: パスワードマネージャーに保存できるように変更</div>
+            </div>
         </footer>
     );
 };

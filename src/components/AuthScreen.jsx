@@ -32,9 +32,21 @@ const AuthScreen = ({ onAuthenticated }) => {
                     Please enter the access code to view the prompt collection.
                 </p>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autoComplete="on">
+                    {/* Hidden username field for password manager support */}
+                    <input
+                        type="text"
+                        name="username"
+                        autoComplete="username"
+                        value="prompt-collection-user"
+                        readOnly
+                        style={{ display: 'none' }}
+                        aria-hidden="true"
+                    />
                     <input
                         type="password"
+                        name="password"
+                        autoComplete="current-password"
                         className="glass-input"
                         value={password}
                         onChange={(e) => {
