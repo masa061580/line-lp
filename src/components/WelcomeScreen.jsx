@@ -78,7 +78,7 @@ const WelcomeScreen = ({ onStart }) => {
                     marginBottom: '1.5rem',
                     fontWeight: '500'
                 }}>
-                    Ver 1.0 (2026.01)
+                    Ver 1.02 (2026.01.18)
                 </div>
 
                 <p style={subtitleStyle}>
@@ -107,6 +107,9 @@ const WelcomeScreen = ({ onStart }) => {
                         <span style={{ marginRight: '0.5rem' }}>📢</span> アップデートとパスワード変更について
                     </h4>
                     <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+                        <strong>Ver 1.02 更新内容:</strong><br />
+                        ・Mac環境におけるデータ変換スクリプトのパス処理を修正しました。<br />
+                        <br />
                         本サイトはAI技術の進化に合わせて随時アップデートを行い、コンテンツを進化させていきます。<br />
                         セキュリティ保持のためアクセスパスワードを定期的に変更する場合がありますが、その際は<strong>公式LINEにてご連絡いたします。</strong>
                     </p>
