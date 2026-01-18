@@ -4,11 +4,21 @@ import shutil
 import json
 
 # Configuration
-SOURCE_MD_PATH = r"c:\Users\misaw\obsidian-vault\docs\prompt_collection\GenerativeAI_Prompt_Collection_Master.md"
-ATTACHMENTS_DIR = r"c:\Users\misaw\obsidian-vault\90_attachments"
-PROJECT_ROOT = r"c:\Users\misaw\obsidian-vault\50_coding\20260108_prompt_collection_web"
+# Determine paths relative to this script file
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# PROJECT_ROOT is one level up from scripts
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+# VAULT_ROOT is two levels up from PROJECT_ROOT (PROJECT_ROOT -> 50_coding -> obsidian)
+VAULT_ROOT = os.path.dirname(os.path.dirname(PROJECT_ROOT))
+
+SOURCE_MD_PATH = os.path.join(VAULT_ROOT, "docs", "prompt_collection", "GenerativeAI_Prompt_Collection_Master.md")
+ATTACHMENTS_DIR = os.path.join(VAULT_ROOT, "90_attachments")
+
 ASSETS_DIR = os.path.join(PROJECT_ROOT, "public", "assets")
 OUTPUT_JS_PATH = os.path.join(PROJECT_ROOT, "src", "data", "content.js")
+
+print(f"DEBUG: Project Root: {PROJECT_ROOT}")
+print(f"DEBUG: Source MD: {SOURCE_MD_PATH}")
 
 def ensure_dir(path):
     if not os.path.exists(path):
